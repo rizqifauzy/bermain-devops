@@ -1,0 +1,3 @@
+#!/bin/bash
+name=Rizqi
+interface=("en0" "en1" "lo0")
