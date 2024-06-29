@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 siapa=$1
 name=DevOps
 
