@@ -1,0 +1,4 @@
+name=Rizqi
+interface=("en0" "en1" "lo0")
+password="12345"
+mysqlpass="rootpasswd#321"

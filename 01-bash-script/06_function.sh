@@ -14,3 +14,13 @@ sayGreet() {
 sayHello
 
 sayGreet "Fauzy" "Linux"
+
+pingFunc() {
+  ping 127.0.0.1 -c 1
+}
+
+pingFunc
+pingFunc
+pingFunc
+pingFunc
+pingFunc

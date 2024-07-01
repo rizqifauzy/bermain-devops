@@ -13,3 +13,18 @@ if [ -z $ip_host ]; then
 else
   echo -e "IP komputer Anda adalah $ip_host"
 fi
+
+
+os=$(uname -a | awk '{print $1}')
+
+if [ $os == "Darwin" ]; then
+  echo "Anda menggunakan MacOS"
+  #brew install nginx
+elif [ $os == "Ubuntu"]; then
+  echo "Anda menggunakan Ubuntu"
+  apt install nginx
+else
+  echo "Anda menggunakan tidak pakai Mac ataupun Ubuntu"
+  yum install nginx
+fi
+

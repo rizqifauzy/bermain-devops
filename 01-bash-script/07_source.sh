@@ -1,7 +1,8 @@
-#/bin/bash
+#!/bin/bash
 
-source ./source/data.txt
-#source ./source/func.sh
+ips=$(cat ./source/list-Ip)
+source ./source/data
+source ./source/func.sh
 
 echo "Hello $name, selamat datang di pelajaran Devops\n"
 
@@ -16,4 +17,8 @@ for i in "${interface[@]}"; do
 done
 
 echo "########"
-#listing
+listing
+
+for i in $ips; do
+    echo $i
+done

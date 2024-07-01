@@ -14,3 +14,32 @@ for i in "${interface[@]}"; do
         echo -e "Interface $i IPnya adalah $ip_host"
     fi
 done
+
+list_op=("192.168.1.30" "127.0.0.1")
+
+#for i in "${list_op[@]}"; do
+
+#  ping $i -c 5
+
+#done
+
+
+echo "##Ambil semua interfaces####"
+
+semua_interface=$(ifconfig |grep mtu | awk '{print $1}' | awk -F":" '{print $1}')
+
+
+for i in $(echo $semua_interface); do
+  
+  ip=$(ifconfig $i |grep -w "inet" | awk '{print $2}')
+  
+  echo $ip
+
+  if [ -z $ip ]; then
+    echo ""
+  else
+    ping $ip -c 1
+  fi
+done
+
+
