@@ -10,7 +10,7 @@ for i in "${interface[@]}"; do
     ip_host=$(ifconfig $i |grep -w "inet" | awk '{print $2}')
 
     if [ -z $ip_host ]; then
-        echo "Interface $i tidak tedapat ipv4"
+        echo "Interface $i tidak terdapat ipv4"
     else
         echo "Interface $i IPnya adalah $ip_host"
     fi
