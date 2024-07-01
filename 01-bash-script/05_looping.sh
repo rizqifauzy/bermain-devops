@@ -15,19 +15,14 @@ for i in "${interface[@]}"; do
     fi
 done
 
-list_op=("192.168.1.30" "127.0.0.1")
+list_ip=("192.168.1.30" "127.0.0.1")
 
-#for i in "${list_op[@]}"; do
-
+#for i in "${list_ip[@]}"; do
 #  ping $i -c 5
-
 #done
 
-
 echo "##Ambil semua interfaces####"
-
 semua_interface=$(ifconfig |grep mtu | awk '{print $1}' | awk -F":" '{print $1}')
-
 
 for i in $(echo $semua_interface); do
   
@@ -41,5 +36,3 @@ for i in $(echo $semua_interface); do
     ping $ip -c 1
   fi
 done
-
-

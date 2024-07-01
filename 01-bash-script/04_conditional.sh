@@ -14,7 +14,6 @@ else
   echo -e "IP komputer Anda adalah $ip_host"
 fi
 
-
 os=$(uname -a | awk '{print $1}')
 
 if [ $os == "Darwin" ]; then
@@ -27,4 +26,3 @@ else
   echo "Anda menggunakan tidak pakai Mac ataupun Ubuntu"
   yum install nginx
 fi
-
