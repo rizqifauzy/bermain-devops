@@ -18,6 +18,13 @@ installPackage() {
     sudo mysql -u root -p$mysqlrootpass -e "CREATE USER 'devops'@'%' IDENTIFIED BY '$mysqluserpass';"
     sudo mysql -u root -p$mysqlrootpass -e "GRANT ALL PRIVILEGES ON *.* TO 'devops'@'%' WITH GRANT OPTION;"
     sudo mysql -u root -p$mysqlrootpass -e "FLUSH PRIVILEGES;"
+
+    # Membuat database baru
+    sudo mysql -u root -pyour_root_password -e "CREATE DATABASE product;"
+
+    # Memberikan hak akses
+    sudo mysql -u root -pyour_root_password -e "GRANT ALL PRIVILEGES ON product.* TO 'devops'@'%';"
+    sudo mysql -u root -pyour_root_password -e "FLUSH PRIVILEGES;"
     
     echo "MySQL installation and user creation complete."
 }
