@@ -1,14 +1,13 @@
 #!/bin/bash
-
 source ./secrets/db_creds.sh
 
-queryDB(){
-    sudo mysql -u $USER -p$PASSWORD-e "$1"
+queryDB() {
+    local query="$1"
+    sudo mysql -h "$HOST" -u "$USER" -p"$PASSWORD" -e "$query"
 }
 main() {
     echo "Query database : "
-    queryDB "select * from product"
+    queryDB "SHOW DATABASES;"
 }
-
 #call main function
 main
