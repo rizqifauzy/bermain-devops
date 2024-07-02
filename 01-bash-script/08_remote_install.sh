@@ -35,9 +35,9 @@ for i in $target_server; do
 done
 
 #for i in $target_server; do
-#    ssh -i ./source/aws-key.pem ubuntu@$i "$(typeset -f installNginx); installNginx"
+#    ssh -i ./source/aws-key.pem ubuntu@$i "$(typeset -f installPackage); installPackage"
 #done
 
 #for i in $target_server; do
-#    sshpass -p $password ssh -p 5432 ubuntu@$i "$(typeset -f installNginx); installNginx"
+#    sshpass -p $password ssh -p 5432 ubuntu@$i "$(typeset -f installPackage); installPackage"
 #done
