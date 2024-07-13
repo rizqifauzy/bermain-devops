@@ -43,3 +43,5 @@ git config --global alias.ko 'commit'
 
 #git ssh
 
+# Test git collabolator
+# add patch comment in line 46
